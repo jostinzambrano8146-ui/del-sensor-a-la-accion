@@ -473,16 +473,6 @@ input[type="range"] {
   background: #123c60;
 }
 
-.aspas.girando {
-  animation: girar 0.7s linear infinite;
-}
-
-@keyframes girar {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .soporte-ventilador {
   width: 15px;
   height: 30px;
@@ -539,10 +529,6 @@ button:disabled {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .aspas.girando {
-    animation: none;
-  }
-
   .habitacion {
     transition: none;
   }

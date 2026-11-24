@@ -176,7 +176,6 @@ actualizarLaboratorioLuz();
 
 const temperaturaLab = document.getElementById("temperatura");
 const valorTemperatura = document.getElementById("valor-temperatura");
-const aspasLab = document.getElementById("aspas");
 const mensajeTemperatura =
   document.getElementById("mensaje-temperatura");
 
@@ -185,7 +184,6 @@ function actualizarVentilador() {
   const encendido = temperatura > 28;
 
   valorTemperatura.textContent = temperatura + " °C";
-  aspasLab.classList.toggle("girando", encendido);
 
   mensajeTemperatura.textContent = encendido
     ? "Temperatura superior a 28 °C: ventilador encendido."
