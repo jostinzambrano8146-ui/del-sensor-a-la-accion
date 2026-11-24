@@ -171,31 +171,6 @@ actualizarLaboratorioLuz();
 
 
 // ========================================
-// LABORATORIO DE TEMPERATURA
-// ========================================
-
-const temperaturaLab = document.getElementById("temperatura");
-const valorTemperatura = document.getElementById("valor-temperatura");
-const mensajeTemperatura =
-  document.getElementById("mensaje-temperatura");
-
-function actualizarVentilador() {
-  const temperatura = Number(temperaturaLab.value);
-  const encendido = temperatura > 28;
-
-  valorTemperatura.textContent = temperatura + " °C";
-
-  mensajeTemperatura.textContent = encendido
-    ? "Temperatura superior a 28 °C: ventilador encendido."
-    : "Temperatura de 28 °C o menor: ventilador apagado.";
-}
-
-temperaturaLab.addEventListener("input", actualizarVentilador);
-
-actualizarVentilador();
-
-
-// ========================================
 // JUEGO DE COMPONENTES
 // ========================================
 

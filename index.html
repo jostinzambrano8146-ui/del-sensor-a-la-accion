@@ -186,7 +186,7 @@
       </p>
 
       <h3>Cómo viaja una medición en IoT</h3>
-      <p>Imagina que el sistema de ventilación envía la temperatura a un tablero que puedes ver en el celular. El sensor mide, el microcontrolador lee el dato y una conexión, como Wi-Fi, lo envía a una plataforma. Desde allí, el usuario consulta la medición. En el laboratorio de esta página, el valor lo eliges tú y se procesa en el navegador.</p>
+      <p>Imagina que el sistema de iluminación envía la medición de luz a un tablero que puedes ver en el celular. El sensor mide, el microcontrolador lee el dato y una conexión, como Wi-Fi, lo envía a una plataforma. Desde allí, el usuario consulta la medición. En el laboratorio de esta página, el valor lo eliges tú y se procesa en el navegador.</p>
 
       <div class="tarjetas">
         <article class="tarjeta">
@@ -233,7 +233,7 @@
         a los actuadores.
       </p>
 
-      <p>Por ejemplo, cuando sentimos calor, el cuerpo puede sudar para ayudar a enfriarse. En el laboratorio, el sensor mide la temperatura, el controlador aplica una regla y el motor enciende el ventilador al superar los 28 °C.</p>
+      <p>Por ejemplo, los ojos perciben la luz y el cerebro procesa esa información. En el laboratorio, el sensor detecta la iluminación y el controlador decide si enciende la lámpara.</p>
 
       <h3>El ciclo de automatización</h3>
       <ol>
@@ -336,8 +336,7 @@
      <section id="laboratorio">
   <h2>Laboratorio interactivo</h2>
   <p>
-    Cambia las condiciones del entorno y descubre cómo
-    responden los sistemas automáticos.
+    Cambia la iluminación y observa cómo responde la lámpara automática.
   </p>
 
   <div class="laboratorios">
@@ -396,56 +395,10 @@
       </details>
     </article>
 
-    <article class="experimento">
-      <h3>🌡️ Ventilación automática</h3>
-      <p>
-        Cambia la temperatura. El ventilador se encenderá
-        cuando supere los 28 °C.
-      </p>
-
-      <label for="temperatura">
-        Temperatura simulada:
-        <output id="valor-temperatura"
-                for="temperatura">22 °C</output>
-      </label>
-
-      <input
-        type="range"
-        id="temperatura"
-        min="10"
-        max="40"
-        value="22"
-      >
-
-      <div class="escena-ventilador">
-        <div class="ventilador">
-          <div id="aspas" class="aspas" aria-hidden="true">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-          <div class="centro-ventilador"></div>
-        </div>
-        <div class="soporte-ventilador"></div>
-        <div class="base-ventilador"></div>
-      </div>
-
-      <p id="mensaje-temperatura" class="estado-lab"
-         role="status" aria-live="polite"></p>
-
-      <p class="nota">
-        Sensor: temperatura. Controlador: regla programada.
-        Actuador: motor del ventilador.
-        La temperatura la cambia el visitante; la simulación
-        no calcula el enfriamiento de una habitación.
-      </p>
-    </article>
-
   </div>
 
   <p class="nota">
-    Las barras representan valores simulados.
-    No reciben mediciones de sensores físicos.
+    La barra representa la iluminación simulada.
   </p>
 </section>
 
