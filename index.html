@@ -185,6 +185,9 @@
         de red para compartir información o permitir el control remoto.
       </p>
 
+      <h3>Cómo viaja una medición en IoT</h3>
+      <p>Imagina que el sistema de ventilación envía la temperatura a un tablero que puedes ver en el celular. El sensor mide, el microcontrolador lee el dato y una conexión, como Wi-Fi, lo envía a una plataforma. Desde allí, el usuario consulta la medición. En el laboratorio de esta página, el valor lo eliges tú y se procesa en el navegador.</p>
+
       <div class="tarjetas">
         <article class="tarjeta">
           <h3>Sensor: detecta</h3>
@@ -229,6 +232,8 @@
         a los sensores; el cerebro, al controlador; y los músculos,
         a los actuadores.
       </p>
+
+      <p>Por ejemplo, cuando sentimos calor, el cuerpo puede sudar para ayudar a enfriarse. En el laboratorio, el sensor mide la temperatura, el controlador aplica una regla y el motor enciende el ventilador al superar los 28 °C.</p>
 
       <h3>El ciclo de automatización</h3>
       <ol>
@@ -564,24 +569,48 @@
 
     <section id="opinion">
       <h2>Ayúdanos a mejorar</h2>
-
-      <p>
-        Después de explorar el sitio, comparte tu opinión sobre
-        el contenido, el diseño y su funcionamiento.
-      </p>
-
-      <p>
-        El enlace a la encuesta se agregará durante la etapa
-        de recolección de opiniones.
-      </p>
-
-      <!-- Aquí agregaremos el enlace real de la encuesta. -->
+      <p>Prueba el menú y al menos una actividad. Al terminar, descarga tu respuesta y compártela con el estudiante que te envió el proyecto.</p>
+      <form id="formulario-opinion">
+          <label for="opinion-contenido">¿Las explicaciones sobre sensores y actuadores fueron claras?</label>
+          <select id="opinion-contenido" name="contenido" required>
+            <option value="">Selecciona una opción</option>
+            <option>Sí</option>
+            <option>En parte</option>
+            <option>No</option>
+          </select>
+          <label for="opinion-diseno">¿El diseño te permitió leer los textos y reconocer los botones?</label>
+          <select id="opinion-diseno" name="diseno" required>
+            <option value="">Selecciona una opción</option>
+            <option>Sí</option>
+            <option>En parte</option>
+            <option>No</option>
+          </select>
+          <label for="opinion-navegacion">¿Encontraste fácilmente las secciones con el menú?</label>
+          <select id="opinion-navegacion" name="navegacion" required>
+            <option value="">Selecciona una opción</option>
+            <option>Sí</option>
+            <option>En parte</option>
+            <option>No</option>
+          </select>
+          <label for="opinion-interactividad">¿Funcionaron las actividades que probaste?</label>
+          <select id="opinion-interactividad" name="interactividad" required>
+            <option value="">Selecciona una opción</option>
+            <option>Sí</option>
+            <option>En parte</option>
+            <option>No</option>
+          </select>
+          <label for="opinion-sugerencia">¿Qué cambiarías del sitio?</label>
+          <textarea id="opinion-sugerencia" name="sugerencia" rows="4" maxlength="600"
+                    placeholder="Describe una mejora o escribe «Ningún cambio»."></textarea>
+          <button type="submit">Descargar mi opinión</button>
+      </form>
+      <p id="estado-opinion" role="status"></p>
     </section>
   </main>
 
   <footer>
     <p>Proyecto escolar · Tecnología e Informática · 2026</p>
-    <p>Contenido basado en los temas trabajados en clase.</p>
+    <p>Contenidos de clase aplicados: IoT y sensores, el cuerpo humano y los sistemas de automatización, y el ciclo del sensor a la acción.</p>
   </footer>
 </body>
 </html>

@@ -1304,3 +1304,34 @@ section {
     animation: none;
   }
 }
+/* Formulario de retroalimentación */
+#formulario-opinion {
+  display: grid;
+  gap: .6rem;
+  max-width: 38rem;
+}
+
+#formulario-opinion label {
+  margin-top: .65rem;
+}
+
+#formulario-opinion select,
+#formulario-opinion textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: .75rem;
+  color: inherit;
+  font: inherit;
+  border: 1px solid #8297ad;
+  border-radius: .75rem;
+  background: #fff;
+}
+
+#formulario-opinion textarea {
+  resize: vertical;
+}
+
+#formulario-opinion button {
+  justify-self: start;
+  margin-top: .5rem;
+}

@@ -330,3 +330,36 @@ reiniciarJuego.addEventListener("click", function () {
 });
 
 mostrarReto();
+
+// Exporta el formulario para enviarlo al estudiante fuera del sitio.
+const formularioOpinion = document.getElementById("formulario-opinion");
+const estadoOpinion = document.getElementById("estado-opinion");
+
+formularioOpinion.addEventListener("submit", function (evento) {
+  evento.preventDefault();
+
+  const datos = new FormData(formularioOpinion);
+  const texto = [
+    "Opinión | Del sensor a la acción",
+    "Fecha: " + new Date().toLocaleDateString("es-CO"),
+    "Claridad del contenido: " + datos.get("contenido"),
+    "Legibilidad del diseño: " + datos.get("diseno"),
+    "Facilidad de navegación: " + datos.get("navegacion"),
+    "Funcionamiento: " + datos.get("interactividad"),
+    "Sugerencia: " + (datos.get("sugerencia").trim() || "(sin comentario)")
+  ].join("\n");
+
+  const archivo = new Blob([texto], { type: "text/plain;charset=utf-8" });
+  const direccion = URL.createObjectURL(archivo);
+  const enlace = document.createElement("a");
+  enlace.href = direccion;
+  enlace.download = "opinion-del-sensor-a-la-accion.txt";
+  document.body.appendChild(enlace);
+  enlace.click();
+  enlace.remove();
+  setTimeout(function () {
+    URL.revokeObjectURL(direccion);
+  }, 1000);
+  estadoOpinion.textContent =
+    "Comparte el archivo de opinión descargado con el estudiante.";
+});
