@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Del sensor a la acción</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="portada">
+  <div class="portada-contenido">
+    <div class="portada-texto">
+      <p class="etiqueta">Tecnología e Informática · Décimo</p>
+
+      <h1>Del sensor<br>a la <span>acción.</span></h1>
+
+      <p class="portada-descripcion">
+        Descubre cómo la tecnología detecta, decide y actúa.
+        Explora los sensores que dan vida a un hogar inteligente.
+      </p>
+
+      <div class="portada-botones">
+        <a class="boton" href="#laboratorio">Explorar laboratorio →</a>
+        <a class="enlace-portada" href="#aprende">
+          Conocer los conceptos
+        </a>
+      </div>
+
+      <div class="temas-portada">
+        <span>IoT</span>
+        <span>Sensores</span>
+        <span>Automatización</span>
+      </div>
+    </div>
+
+    <div class="portada-ilustracion">
+      <svg
+        class="casa-iot"
+        viewBox="0 0 520 420"
+        role="img"
+        aria-labelledby="titulo-casa descripcion-casa"
+      >
+        <title id="titulo-casa">Hogar inteligente</title>
+        <desc id="descripcion-casa">
+          Ilustración de una casa con un sensor,
+          un controlador y una lámpara conectados.
+        </desc>
+
+        <!-- Fondo de la ilustración -->
+        <circle cx="265" cy="215" r="165"
+                fill="#ffffff" opacity="0.05"/>
+        <circle cx="265" cy="215" r="135"
+                fill="none" stroke="#76e4dc"
+                stroke-opacity="0.25" stroke-dasharray="6 10"/>
+
+        <!-- Conexiones -->
+        <path d="M110 125 L190 125 L230 175
+                 M420 150 L355 150 L320 175
+                 M395 330 L345 330 L315 275"
+              fill="none" stroke="#78e9dc"
+              stroke-width="3" stroke-dasharray="7 7"/>
+
+        <!-- Casa -->
+        <path d="M155 200 L265 105 L375 200"
+              fill="none" stroke="#b9fff4"
+              stroke-width="13" stroke-linecap="round"
+              stroke-linejoin="round"/>
+        <rect x="172" y="200" width="186" height="145"
+              rx="15" fill="#173e60" stroke="#83e8dc"
+              stroke-width="3"/>
+        <rect x="197" y="222" width="48" height="48"
+              rx="8" fill="#60d6cd"/>
+        <path d="M221 222 V270 M197 246 H245"
+              stroke="#173e60" stroke-width="4"/>
+        <rect x="281" y="257" width="45" height="88"
+              rx="8" fill="#2d637c"/>
+        <circle cx="314" cy="301" r="3" fill="#b9fff4"/>
+
+        <!-- Señal inalámbrica -->
+        <path d="M235 165 Q265 140 295 165
+                 M246 176 Q265 160 284 176"
+              fill="none" stroke="#b9fff4"
+              stroke-width="5" stroke-linecap="round"/>
+        <circle cx="265" cy="185" r="4" fill="#b9fff4"/>
+
+        <!-- Sensor -->
+        <g class="nodo-sensor">
+          <rect x="35" y="78" width="135" height="85"
+                rx="16" fill="#efffff"/>
+          <circle cx="64" cy="110" r="11"
+                  fill="#087f8c"/>
+          <circle cx="64" cy="110" r="4"
+                  fill="#b8fff0"/>
+          <text x="84" y="116" fill="#153b68"
+                font-size="17" font-weight="700">Sensor</text>
+          <text x="53" y="142" fill="#48647b"
+                font-size="13">Detecta el entorno</text>
+        </g>
+
+        <!-- Controlador -->
+        <g class="nodo-controlador">
+          <rect x="345" y="85" width="160" height="85"
+                rx="16" fill="#f4efff"/>
+          <rect x="363" y="104" width="22" height="22"
+                rx="4" fill="#815bbb"/>
+          <text x="393" y="120" fill="#493576"
+                font-size="16" font-weight="700">Controlador</text>
+          <text x="363" y="148" fill="#63547d"
+                font-size="13">Aplica las reglas</text>
+        </g>
+
+        <!-- Actuador -->
+        <g class="nodo-actuador">
+          <rect x="355" y="300" width="150" height="85"
+                rx="16" fill="#fff7df"/>
+          <circle cx="380" cy="326" r="10" fill="#e8ad32"/>
+          <path d="M376 336 H384" stroke="#a67b29"
+                stroke-width="4"/>
+          <text x="399" y="333" fill="#71511e"
+                font-size="16" font-weight="700">Actuador</text>
+          <text x="373" y="362" fill="#796642"
+                font-size="13">Realiza la acción</text>
+        </g>
+
+        <!-- Base -->
+        <ellipse cx="265" cy="366" rx="115" ry="12"
+                 fill="#081a2b" opacity="0.3"/>
+      </svg>
+
+      <p class="pie-ilustracion">
+        Sensor → Controlador → Actuador
+      </p>
+    </div>
+  </div>
+</header>
+
+  <nav aria-label="Menú principal">
+    <a href="#inicio">Inicio</a>
+    <a href="#aprende">Aprende</a>
+    <a href="#simula">Simula</a>
+    <a href="#laboratorio">Laboratorio</a>
+<a href="#juego">Juego</a>
+    <a href="#cuestionario">Cuestionario</a>
+    <a href="#opinion">Tu opinión</a>
+  </nav>
+
+  <main>
+    <section id="inicio">
+      <h2>Bienvenido</h2>
+
+      <p>
+        En este sitio descubrirás cómo los sensores detectan cambios,
+        los controladores procesan información y los actuadores
+        realizan acciones.
+      </p>
+
+      <p>
+        Nuestro objetivo es explicar estos conceptos con ejemplos
+        sencillos, una simulación y un cuestionario.
+      </p>
+
+      <p><strong>Estudiante:</strong> JOSTIN DAVID ZAMBRANO DAVILA</p>
+      <p><strong>Grado:</strong> Décimo</p>
+
+      <a class="boton" href="#aprende">Empezar a aprender</a>
+    </section>
+
+    <section id="aprende">
+      <h2>Aprende los conceptos</h2>
+
+      <h3>¿Qué es IoT?</h3>
+      <p>
+        IoT significa Internet de las cosas. Permite conectar objetos
+        a una red para compartir datos, supervisarlos o controlarlos.
+        Por ejemplo, una cámara que podemos consultar desde el celular.
+      </p>
+
+      <p>
+        Un sistema automático puede funcionar sin internet.
+        Para convertirlo en un sistema IoT, podemos añadir una conexión
+        de red para compartir información o permitir el control remoto.
+      </p>
+
+      <div class="tarjetas">
+        <article class="tarjeta">
+          <h3>Sensor: detecta</h3>
+          <p>
+            Detecta una condición del entorno y la convierte
+            en una señal que el sistema puede utilizar.
+          </p>
+          <p>Ejemplos: sensores de luz, temperatura y movimiento.</p>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Controlador: procesa</h3>
+          <p>
+            Recibe información y ejecuta las instrucciones
+            programadas para determinar qué debe hacer el sistema.
+          </p>
+          <p>Ejemplos: un microcontrolador o un PLC.</p>
+        </article>
+
+        <article class="tarjeta">
+          <h3>Actuador: actúa</h3>
+          <p>
+            Ejecuta una acción física como producir luz,
+            mover una puerta o abrir una válvula.
+          </p>
+          <p>Ejemplos: lámpara, motor y electroválvula.</p>
+        </article>
+      </div>
+
+      <h3>Tipos de sensores</h3>
+      <ul>
+        <li>Luz: detecta cambios en la iluminación.</li>
+        <li>Temperatura: mide qué tan caliente o frío está el entorno.</li>
+        <li>Movimiento: detecta movimiento en una zona.</li>
+        <li>Humedad: mide humedad, según el tipo de sensor.</li>
+        <li>Gas: detecta determinados gases, según el modelo.</li>
+      </ul>
+
+      <h3>Comparación con nuestro cuerpo</h3>
+      <p>
+        Como comparación educativa, nuestros sentidos se parecen
+        a los sensores; el cerebro, al controlador; y los músculos,
+        a los actuadores.
+      </p>
+
+      <h3>El ciclo de automatización</h3>
+      <ol>
+        <li>Ocurre un cambio en el entorno.</li>
+        <li>El sensor detecta el cambio.</li>
+        <li>El controlador procesa la información.</li>
+        <li>El actuador realiza una acción.</li>
+        <li>La acción produce un resultado en el entorno.</li>
+      </ol>
+       <figure>
+  <img
+    src="ciclo.png"
+    alt="Sensor de luz, controlador y lámpara automática"
+    style="width: 100%; height: auto; border-radius: 12px;"
+  >
+  <figcaption>
+    Funcionamiento de una lámpara automática.
+  </figcaption>
+</figure>
+      <h3>Ejemplos cotidianos</h3>
+      <p>
+        Un ventilador puede encenderse cuando sube la temperatura.
+        Una lámpara puede encenderse cuando oscurece.
+        Una puerta puede abrirse al detectar la llegada de una persona.
+      </p>
+
+      <h3>Beneficios y cuidados de IoT</h3>
+      <p>
+        IoT puede facilitar tareas y permitir la supervisión remota.
+        Debemos proteger los dispositivos con contraseñas seguras
+        y mantenerlos actualizados.
+      </p>
+      <h3>Explora y descubre</h3>
+
+<details>
+  <summary>¿Qué pasa si falta el sensor?</summary>
+  <p>
+    El sistema pierde la medición de esa condición del entorno.
+    Por ejemplo, no podría saber si está oscuro mediante
+    el sensor de luz.
+  </p>
+</details>
+
+<details>
+  <summary>¿Qué pasa si falta el controlador?</summary>
+  <p>
+    En el sistema que estamos estudiando, faltaría el componente
+    que procesa la información y aplica las instrucciones.
+  </p>
+</details>
+
+<details>
+  <summary>¿Qué pasa si falta el actuador?</summary>
+  <p>
+    El sistema podría detectar y procesar información,
+    pero no realizaría la acción física prevista.
+    Por ejemplo, no encendería la lámpara.
+  </p>
+</details>
+
+<details>
+  <summary>¿La automatización es lo mismo que IoT?</summary>
+  <p>
+    No. La automatización ejecuta acciones según reglas.
+    IoT añade conectividad para intercambiar información
+    entre dispositivos y otros sistemas.
+  </p>
+</details>
+      <a class="boton" href="#simula">Probar la simulación</a>
+    </section>
+
+    <section id="simula">
+      <h2>Simula una lámpara automática</h2>
+
+      <p>
+        Cambia la iluminación del entorno. El programa encenderá
+        la lámpara cuando selecciones oscuridad.
+      </p>
+
+      <label for="ambiente">¿Cómo está el entorno?</label>
+      <select id="ambiente">
+        <option value="dia">De día: hay suficiente luz</option>
+        <option value="noche">De noche: está oscuro</option>
+      </select>
+
+      <div class="simulador">
+        <div id="lampara" class="lampara">
+          <span aria-hidden="true">💡</span>
+        </div>
+
+        <p id="estado" role="status" aria-live="polite"></p>
+        <p id="explicacion"></p>
+      </div>
+
+      <p class="nota">
+        Esta es una simulación: no está conectada a un sensor físico.
+        En un sistema real, un sensor de luz mediría la iluminación.
+      </p>
+    </section>
+     <section id="laboratorio">
+  <h2>Laboratorio interactivo</h2>
+  <p>
+    Cambia las condiciones del entorno y descubre cómo
+    responden los sistemas automáticos.
+  </p>
+
+  <div class="laboratorios">
+
+    <article class="experimento">
+      <h3>💡 Iluminación automática</h3>
+      <p>
+        Mueve la barra. La lámpara se encenderá si la
+        iluminación baja del 40 %.
+      </p>
+
+      <label for="nivel-luz">
+        Iluminación simulada:
+        <output id="valor-luz" for="nivel-luz">70 %</output>
+      </label>
+
+      <input
+        type="range"
+        id="nivel-luz"
+        min="0"
+        max="100"
+        value="70"
+      >
+
+      <div id="habitacion" class="habitacion">
+        <span class="ventana" aria-hidden="true">🪟</span>
+
+        <div id="bombillo-lab" class="bombillo-lab">
+          <span aria-hidden="true">💡</span>
+        </div>
+
+        <span class="mueble" aria-hidden="true">🛋️</span>
+      </div>
+
+      <p id="mensaje-luz" class="estado-lab"
+         role="status" aria-live="polite"></p>
+
+      <details>
+        <summary>Reto: ¿qué pasa si un componente falla?</summary>
+
+        <label class="opcion-falla">
+          <input type="checkbox" id="falla-sensor">
+          Simular sensor desconectado
+        </label>
+
+        <label class="opcion-falla">
+          <input type="checkbox" id="falla-actuador">
+          Simular lámpara dañada
+        </label>
+
+        <p>
+          Para esta simulación, si el sensor se desconecta,
+          el controlador deja la lámpara apagada.
+          Es una regla elegida para este ejemplo.
+        </p>
+      </details>
+    </article>
+
+    <article class="experimento">
+      <h3>🌡️ Ventilación automática</h3>
+      <p>
+        Cambia la temperatura. El ventilador se encenderá
+        cuando supere los 28 °C.
+      </p>
+
+      <label for="temperatura">
+        Temperatura simulada:
+        <output id="valor-temperatura"
+                for="temperatura">22 °C</output>
+      </label>
+
+      <input
+        type="range"
+        id="temperatura"
+        min="10"
+        max="40"
+        value="22"
+      >
+
+      <div class="escena-ventilador">
+        <div class="ventilador">
+          <div id="aspas" class="aspas" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="centro-ventilador"></div>
+        </div>
+        <div class="soporte-ventilador"></div>
+        <div class="base-ventilador"></div>
+      </div>
+
+      <p id="mensaje-temperatura" class="estado-lab"
+         role="status" aria-live="polite"></p>
+
+      <p class="nota">
+        Sensor: temperatura. Controlador: regla programada.
+        Actuador: motor del ventilador.
+        La temperatura la cambia el visitante; la simulación
+        no calcula el enfriamiento de una habitación.
+      </p>
+    </article>
+
+  </div>
+
+  <p class="nota">
+    Las barras representan valores simulados.
+    No reciben mediciones de sensores físicos.
+  </p>
+</section>
+
+<section id="juego">
+  <h2>🎯 Identifica el componente</h2>
+  <p>
+    Lee la descripción y elige si corresponde a un sensor,
+    un controlador o un actuador.
+  </p>
+
+  <div class="panel-juego">
+    <p id="progreso-juego"></p>
+    <progress id="barra-juego" max="5" value="0"
+              aria-label="Retos respondidos"></progress>
+
+    <h3 id="objeto-juego"></h3>
+    <p id="descripcion-juego"></p>
+
+    <div id="opciones-juego" class="opciones-juego">
+      <button type="button" data-tipo="sensor">Sensor</button>
+      <button type="button" data-tipo="controlador">
+        Controlador
+      </button>
+      <button type="button" data-tipo="actuador">Actuador</button>
+    </div>
+
+    <p id="respuesta-juego" role="status"
+       aria-live="polite"></p>
+
+    <button type="button" id="siguiente-juego" hidden>
+      Siguiente reto
+    </button>
+
+    <button type="button" id="reiniciar-juego"
+            class="secundario">
+      Reiniciar juego
+    </button>
+  </div>
+</section>
+    <section id="cuestionario">
+      <h2>Pon a prueba tus conocimientos</h2>
+      <p>Selecciona una respuesta por pregunta.</p>
+
+      <form id="formulario-quiz">
+        <fieldset>
+          <legend>1. ¿Qué significa IoT?</legend>
+
+          <label>
+            <input type="radio" name="p1" value="a" required>
+            Internet de las cosas.
+          </label>
+
+          <label>
+            <input type="radio" name="p1" value="b">
+            Instalación de oficinas tecnológicas.
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>2. ¿Qué componente detecta la luz del entorno?</legend>
+
+          <label>
+            <input type="radio" name="p2" value="a" required>
+            El actuador.
+          </label>
+
+          <label>
+            <input type="radio" name="p2" value="b">
+            El sensor.
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. ¿Qué hace el controlador?</legend>
+
+          <label>
+            <input type="radio" name="p3" value="a" required>
+            Procesa información y ejecuta instrucciones.
+          </label>
+
+          <label>
+            <input type="radio" name="p3" value="b">
+            Únicamente suministra energía.
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>4. ¿Cuál es un ejemplo de actuador?</legend>
+
+          <label>
+            <input type="radio" name="p4" value="a" required>
+            Un sensor de temperatura.
+          </label>
+
+          <label>
+            <input type="radio" name="p4" value="b">
+            Un motor que abre una puerta.
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>5. ¿Todo sistema automático necesita internet?</legend>
+
+          <label>
+            <input type="radio" name="p5" value="a" required>
+            Sí, siempre.
+          </label>
+
+          <label>
+            <input type="radio" name="p5" value="b">
+            No, puede ejecutar reglas de forma local.
+          </label>
+        </fieldset>
+
+        <button type="submit">Calificar mis respuestas</button>
+        <button type="reset" class="secundario">Intentar otra vez</button>
+      </form>
+
+      <div id="resultado" role="status" aria-live="polite"></div>
+    </section>
+
+    <section id="opinion">
+      <h2>Ayúdanos a mejorar</h2>
+
+      <p>
+        Después de explorar el sitio, comparte tu opinión sobre
+        el contenido, el diseño y su funcionamiento.
+      </p>
+
+      <p>
+        El enlace a la encuesta se agregará durante la etapa
+        de recolección de opiniones.
+      </p>
+
+      <!-- Aquí agregaremos el enlace real de la encuesta. -->
+    </section>
+  </main>
+
+  <footer>
+    <p>Proyecto escolar · Tecnología e Informática · 2026</p>
+    <p>Contenido basado en los temas trabajados en clase.</p>
+  </footer>
+</body>
+</html>
